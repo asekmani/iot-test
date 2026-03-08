@@ -3,21 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IoT Test App</title>
+  <title>IoT Playground</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Bungee:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <main class="container">
-    <h1>IoT Test App</h1>
-    <p class="subtitle">Application web de test pour validation rapide.</p>
+  <div class="bg-orb orb-a"></div>
+  <div class="bg-orb orb-b"></div>
+  <main class="container" role="main">
+    <header class="hero">
+      <p class="tag">k3d x Argo CD</p>
+      <h1>IoT Playground</h1>
+      <p class="subtitle">Une mini interface elegante et fun pour valider ton deploiement GitOps.</p>
+    </header>
 
-    <section class="card">
-      <p>Etat du service: <strong id="status">verification...</strong></p>
-      <button id="checkBtn" type="button">Verifier maintenant</button>
+    <section class="card status-card">
+      <div>
+        <p class="label">Version active</p>
+        <p class="version" id="versionBadge">loading...</p>
+      </div>
+      <div>
+        <p class="label">Etat</p>
+        <p class="state" id="status">verification...</p>
+      </div>
     </section>
 
-    <section class="card">
-      <p>Horodatage local:</p>
+    <section class="card fun-card">
+      <p class="label">Blague du deploiement</p>
+      <p id="joke">Chargement de l'humour...</p>
+      <button id="checkBtn" type="button">Changer de blague</button>
+    </section>
+
+    <section class="card meta-card">
+      <p class="label">Horodatage local</p>
       <code id="timestamp"></code>
     </section>
   </main>
