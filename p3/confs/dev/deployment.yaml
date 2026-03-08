@@ -16,5 +16,6 @@ spec:
       containers:
       - name: playground
         image: asekmani/iot-playground:v1
+        imagePullPolicy: Always
         ports:
         - containerPort: 8888
